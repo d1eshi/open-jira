@@ -1,19 +1,24 @@
 import React from 'react'
-import { AppBar, IconButton, Toolbar, Typography } from '@mui/material'
+import { AppBar, IconButton, Link, Toolbar, Typography } from '@mui/material'
 import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined'
 import { UIContext } from '../../context/ui'
+import NextLink from 'next/link'
 
 export const Navbar = () => {
   const { openSideMenu } = React.useContext(UIContext)
 
   return (
-    <AppBar position="sticky">
+    <AppBar position='sticky'>
       <Toolbar>
-        <IconButton size="large" edge="start" onClick={openSideMenu}>
+        <IconButton size='large' edge='start' onClick={openSideMenu}>
           <MenuOutlinedIcon />
         </IconButton>
 
-        <Typography variant="h6">OpenJira</Typography>
+        <NextLink href='/' passHref>
+          <Link underline='none' color='#eee'>
+            <Typography variant='h6'>OpenJira</Typography>
+          </Link>
+        </NextLink>
       </Toolbar>
     </AppBar>
   )

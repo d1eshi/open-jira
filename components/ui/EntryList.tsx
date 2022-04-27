@@ -1,7 +1,7 @@
 import { List, Paper } from '@mui/material'
 import React, { DragEvent, FC } from 'react'
 import { EntriesContext } from '../../context/entries'
-import { EntryStatus } from '../../context/entries/interfaces'
+import { EntryStatus } from '../../interfaces'
 import { UIContext } from '../../context/ui'
 import { EntryCard } from './EntryCard'
 import styles from './EntryList.module.css'
